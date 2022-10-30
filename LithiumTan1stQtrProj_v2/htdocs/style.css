@@ -1,0 +1,21 @@
+
+#header {
+	text-align:center;
+	background:white;
+	padding: 5px;
+	position: fixed;
+	top: 0;
+        width: 100%;
+}
+#content {
+	text-align: center;
+	background: white;
+        padding: 50px;
+        
+}
+#kokomi {
+        text-align: center;
+}     
+#footer {
+	text-align: center;
+}   

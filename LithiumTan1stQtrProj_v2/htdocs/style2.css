@@ -1,0 +1,9 @@
+html {
+       background-image: url("images/background.png");
+       background-size: cover;
+}
+#index{
+        text-align:left;
+	background:white;
+        width: 100%;
+}
