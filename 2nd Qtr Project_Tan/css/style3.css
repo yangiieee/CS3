@@ -1,0 +1,100 @@
+body{
+	background-image: url(https://i.pinimg.com/564x/63/1d/9e/631d9e7455e53f7d50f6c9063f72ca2a.jpg);
+	background-size: cover;
+	font-family: 'blum';
+    src: url('blum-normal-webfont.woff2') format('woff2'),
+         url('blum-normal-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+	background-attachment:fixed;
+}
+
+
+#header{
+	text-align:center;
+	font-family: 'blum';
+	text-shadow: 0 2px 6px rgb(0 0 0 / 30%);
+    src: url('blum-normal-webfont.woff2') format('woff2'),
+         url('blum-normal-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+	color: white;
+	background-image: url(https://i.pinimg.com/564x/34/06/e3/3406e332715131a3736ed4d4380c9a7a.jpg);
+	border-radius:20px;
+	margin:10px 550px 10px 10px;
+	border:ridge #088F8F 1px;
+	background-attachment:fixed;
+
+}
+h2{ 
+	font-size:30px;
+	color:white;
+	text-shadow: 0 2px 6px rgb(0 0 0 / 30%);
+	text-align:center;
+	
+}
+ul{
+	font-family: Sans-serif;
+	color:#CCCCFF;
+	border-radius:5px;
+	background-color: rgba(0 0 0 / 50%);
+	margin-right: 150px;
+	margin-left: 150px;
+	text-align:center;
+}
+ul2{
+	text-align:center;
+}
+h3{
+	font-size:30px;
+	color:white;
+	text-shadow: 0 2px 6px rgba(0 0 0 / 30%);
+	text-align:center;
+}
+#showcase{
+	font-family: Sans-serif;
+	color:#CCCCFF;
+	margin-right: 150px;
+	margin-left: 150px;
+	text-align:center;
+	background-color: rgba(0 0 0 / 50%);
+	border-radius:5px;
+}
+footer {
+	font-size:10px;
+	color:white;
+	text-shadow: 0 2px 6px rgba(0 0 0 / 30%);
+	text-align:center;
+	font-family: 'blum';
+    src: url('blum-normal-webfont.woff2') format('woff2'),
+         url('blum-normal-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+.page1:link{
+	color:#89CFF0;
+}
+.page1:visited{
+	color:#CCCCFF;
+}
+.page1:hover{
+	color:#fcbacb;
+}
+.ingame:link{
+	color:#89CFF0;
+}
+.ingame:visited{
+	color:#CCCCFF;
+}
+.ingame:hover{
+	color:#fcbacb;
+}
+.Misc:link{
+	color:#89CFF0;
+}
+.Misc:visited{
+	color:#CCCCFF;
+}
+.Misc:hover{
+	color:#fcbacb;
+}
