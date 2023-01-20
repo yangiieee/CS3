@@ -1,0 +1,91 @@
+body {
+       background-image: url(https://i.pinimg.com/564x/8a/55/b2/8a55b21def2c32fcfefe8d24a9098300.jpg);
+       background-size: cover;
+       background-attachment: fixed;
+	
+}
+#header{
+	text-align:center;
+	text-shadow: 0 2px 6px rgb(0 0 0 / 30%);
+	font-family: 'blum';
+    src: url('blum-normal-webfont.woff2') format('woff2'),
+         url('blum-normal-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+	color: white;
+	background-image: url(https://i.pinimg.com/564x/34/06/e3/3406e332715131a3736ed4d4380c9a7a.jpg);
+	border-radius:20px;
+	margin:10px 550px 10px 10px;
+	border:ridge #088F8F 1px;
+}
+#kokothink{
+	margin-left:20px;
+	
+}
+	
+	
+ul{
+	font-size:25px;
+        float:right;
+	margin-right:300px;
+	font-family: 'blum';
+    src: url('blum-normal-webfont.woff2') format('woff2'),
+         url('blum-normal-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+	color:#89CFF0;
+	border-radius:5px;
+	background-color: rgba(0 0 0 / 50%);
+	padding-top: 10px; 
+	padding-right: 30px; 
+	padding-bottom: 10px; 
+	padding-left: 30px;
+}
+
+.Char:link{
+	color:#89CFF0;
+}
+.Char:visited{
+	color:#CCCCFF;
+}
+.Char:hover{
+	color:#fcbacb;
+}
+.ingame:link{
+	color:#89CFF0;
+}
+.ingame:visited{
+	color:#CCCCFF;
+}
+.ingame:hover{
+	color:#fcbacb;
+}
+.Misc:link{
+	color:#89CFF0;
+}
+.Misc:visited{
+	color:#CCCCFF;
+}
+.Misc:hover{
+	color:#fcbacb;
+}
+ul2{
+	font-family: Sans-serif;
+	color:#E5D3B3;
+	border-radius:2px;
+	background-color: rgba(0 0 0 / 50%);
+	margin-left:20px;
+	
+	
+}
+footer {
+	font-size:10px;
+	color:white;
+	text-shadow: 0 2px 6px rgba(0 0 0 / 30%);
+	text-align:center;
+	font-family: 'blum';
+    src: url('blum-normal-webfont.woff2') format('woff2'),
+         url('blum-normal-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;  
+}
