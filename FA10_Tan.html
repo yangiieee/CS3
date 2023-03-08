@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FA10_Tan</title>
+</head>
+	<body>
+	<h1>Formative Assessment</h1>
+	<button onclick= "random()">Generate Number</button>
+	<p id="randomNumber"></p>
+	<p id="breakdown"></p>
+
+		<script>
+		var one; var two; 
+			
+		function random() {
+			one = Math.floor(Math.random() * 1001);
+			two = String(one).split('');
+			document.getElementById("randomNumber").innerHTML = "Randomly Generated Number: " + one;
+			document.getElementById("breakdown").innerHTML = "Breakdown: " + two.slice(-3, -2)*100 + ", " + two.slice(-2, -1)*10 + ", " + two.slice(-1);
+			}
+		</script>
+</body>
+</html>
