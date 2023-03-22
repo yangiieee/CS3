@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>One Time Password </title>
+		<!-- provide the necessary meta tags -->
+			<meta name="description" content="One-Time Password"/>
+			<meta name="subject" content="Computer Science (CS)"/>
+			<meta name="copyright" content="RTan_Lithium"/>
+			<meta name="language" content="EN"/>
+			<meta name="author" content="Rosceliyah Tan"/>
+        <style>
+        	body {background: lightblue; 
+            	text-align: center;
+            	font-family: arial;
+                color: navy;
+            }
+            button {padding: 10px; background:violet }
+            a {font-size: 0.5em; color: maroon}
+        </style>
+
+	</head>
+<body onload="getOTP()">
+	<h1> Final Verification Step </h1>
+	<h2> Current OTP: <span id="otp"> _ _ _ _ _ _ <span> <a href="#" onclick="getOTP()"> New OTP </a></h2>
+    <button onclick="wehOTP()">Enter the OTP as shown above </button>
+    
+    <script>
+    		/*Call function to generate a random 6-digit OTP*/
+		function getOTP(){
+			let digits= '0123456789';
+			let OTP = '';
+			for (let i = 0; i < 6; i++) {
+				OTP += digits[Math.floor(Math.random() * 10)];
+						}
+	
+			document.getElementById('otp').innerHTML = OTP;
+				}
+	
+		/*Call function to check if OTP is correct*/
+		function wehOTP() {
+			let urOTP = prompt ('Please enter your one-time password here: ');
+			let givenOTP = document.getElementById('otp').innerHTML;
+			if (urOTP === givenOTP) {
+				window.open('http://twitter.com');
+						}
+			 	else { 
+					alert('Incorrect password. Please try again.');
+					getOTP();
+					}
+				}
+		
+    
+    </script>
+</body>
+</html>
+
