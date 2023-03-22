@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Choose Background Color</title>
+		<!-- provide the necessary meta tags -->
+        <style>
+        	* { box-sizing: border-box; 
+            	font-family: arial; 
+                color: white;
+            }           
+            body {background:navy}
+            ul {
+            	list-style-type: none;
+                width: 100px;
+                padding: 0;
+                border: 1px solid black;
+                background: gray;
+            }
+            li {width: 100%;
+            	border-bottom: 1px solid black;
+                padding: 5px;
+            }
+            li:nth-child(3) {border:none}
+            a {	text-decoration:none;
+            	display:block;
+                width: 100%;
+            }
+            li:nth-child(1):hover {background:purple}
+            li:nth-child(2):hover {background:navy}
+            li:nth-child(3):hover {background:maroon}
+            
+        </style>
+
+	</head>
+	<body>
+		<h2> Choose Background Color </h2>
+        <ul>
+        	<li><a onclick = "purr()"; "href="#"> Purple </a></li>
+            <li><a a onclick = "navie()"; " href="#"> Navy </a></li>
+            <li><a a onclick = "mars()"; "href="#"> Maroon </a></li>
+        </ul>
+		
+		<!--call onclick for each of the listed colors--!>
+
+	
+        <script>
+		
+		//call a function to change the background color of the body (Maroon,Purple,Navy)
+		function mars() { //call a function to change the background to maroon
+			document.body.style.backgroundColor = "maroon";
+
+				}
+		
+		function navie() { //call a function to change the background to navy
+			document.body.style.backgroundColor = "navy";
+				 }
+
+		function purr() { //call a function to change the background to purple
+			document.body.style.backgroundColor = "purple";
+				}
+        </script>
+	</body>
+</html>
+
