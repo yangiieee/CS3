@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Numerology</title>
+		<!-- provide the necessary meta tags -->
+			<meta name="description" content="Your Fortune Today"/>
+			<meta name="subject" content="Computer Science (CS)"/>
+			<meta name="copyright" content="RTan_Lithium"/>
+			<meta name="language" content="EN"/>
+			<meta name="author" content="Rosceliyah Tan"/>
+
+        <style>
+        	body {background: lightblue; 
+            	text-align: center;
+            	font-family: arial;
+                color: navy;
+            }
+            button {padding: 10px; background:violet }
+            span {font-size: 0.5em; color: maroon}
+        </style>
+
+	</head>
+<body>
+	<h1> Your Fortune is in your name </h1>
+	<h2> Your Name is: <span id="thename"> </span></h2>
+    <h2> Today's fortune: <span id="fortune"> </span></h2>
+    
+    <button onclick= "getFortune()">  Click here to enter your name ! </button>
+     <script>
+    	
+		function getFortune(){ //This will ask the user for their name and display it
+			var name = prompt("Hi! Before anything else, please enter your name here 😸:");
+			document.getElementById("thename").innerHTML= name;
+
+				
+
+				//Get number of characters including special characters and spaces
+				var charnum = name.length;
+			
+				//loop to obtain a single digit
+				while (length > 9) {
+					var sum=0;
+					//Get digits' sum by a string
+						for (var  n=0;charnum.toString().length; n++) {
+						sum += parselnt(charnum.toString()[n]);
+						}
+						charnum = sum;
+					}
+					//Display fortune based on numerology
+					switch (charnum){
+		case 1:                 
+  		    document.getElementById("fortune").innerHTML = "Your day will be normal today. Don't expect much.";
+                    break;
+                case 2:
+                    document.getElementById("fortune").innerHTML = "You'll be first to something today, keep an eye out!";
+                    break;
+                case 3:
+                    document.getElementById("fortune").innerHTML = "You're pretty unlucky today, maybe try again some other day.";
+                    break;
+                case 4:
+                    document.getElementById("fortune").innerHTML = "Unlucky, unfortunate, and every other way to say your luck is bad today.";
+                    break;
+                case 5:
+                    document.getElementById("fortune").innerHTML = "Something you keep dearly will either perish or be lost. Take care of your valuables!";
+                    break;
+                case 6:
+                    document.getElementById("fortune").innerHTML = "Your day will be either bad nor good. Today will be balanced.";
+                    break;
+                case 7:
+                    document.getElementById("fortune").innerHTML = "You will trip or fall at least once today. Watch out !.";
+                    break;
+                case 8:
+                    document.getElementById("fortune").innerHTML = "Today will be filled with good food. Eat Well!";
+                    break;
+                case 9:
+                    document.getElementById("fortune").innerHTML = "Good for you! Your day seems to be going well!";
+                    break;
+		case 10:
+		    document.getElementById("fortune").innerHTML = "No rain for you today, only sunshines and sun rays!";
+                    break;
+            }
+
+	}
+	
+    </script>
+    
+</body>
+</html>
