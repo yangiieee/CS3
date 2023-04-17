@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<style>
+	 td, table {
+		border: 1px solid black;
+		border-color: #fcbacb;
+	 }
+	</style>
+			<body>
+				[enter a number between 2 and 10]<br>
+				<input type="number" id="numOne" min="2" max="10"></input>
+				<input type="number" id="numTwo" min="2" max="10"></input>
+				<br>
+				<button onclick="generatetable()">Generate a Table</button>
+					
+					<script>
+						var wholetable;
+						function generatetable(){
+							if(wholetable){
+							wholetable.remove();
+							}
+							numOne = document.getElementById('numOne').value;
+							numTwo = document.getElementById('numTwo').value;
+	
+								if(numOne < 2 || numOne > 10 || numTwo < 2 || numTwo> 10){
+								alert("Please enter a number between 2 and 10");
+									}
+				
+									else{
+										wholetable = document.createElement('table');
+										document.body.appendChild(wholetable);
+											for(var i = 1; i<=numOne; i++){
+											var tablerow = document.createElement('tr');
+											for(var j = 1; j<=numTwo; j++){
+												
+								var tablecell = document.createElement('td');
+									tablecell.innerHTML = j*i;
+									tablerow.appendChild(tablecell);
+						}
+						wholetable.appendChild(tablerow);
+					}
+				}
+			
+			
+			}
+		</script>
+
+	</body>
+
+</html>
