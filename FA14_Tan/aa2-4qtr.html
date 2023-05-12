@@ -1,0 +1,255 @@
+
+<!DOCTYPE html>
+<html>
+	    <head>	
+		        <meta charset="UTF-8">
+		        <meta name="description" content=" AA2-Qtr4 ">
+		        <meta name="keywords" content="HTML, CSS, JavaScript">
+		        <meta name="author" content=" Rosceliyah Tan ">
+
+
+
+
+<title> ❀ Sign-Up Sheet ❀ </title>
+		
+		<style>
+		
+		body {
+			background-image: url(strawberry.jpg);
+			background-size: cover;
+			    }
+		
+	    form {
+		border: 0;
+		margin: 30px auto;
+		margin-top: 50px;
+		background-color: rgba(255, 255, 255, 0.5);
+		width: 50%;
+		padding: 20px;
+		padding-top: 30px;
+		border-radius: 35px;
+	    }
+		
+		fieldset {
+		border: 0;
+		}
+		
+	    legend {
+		margin-bottom: 20px;
+		font-size: 24px;
+		font-family: Comic Sans MS;
+		font-weight: bold;
+		text-align: center;
+		color:#FE828C;
+	    }
+		
+		label {
+		font-weight: bold;
+		font-family: Comic Sans MS;
+		color:#FE828C;
+	    }	
+	
+	    input, output {
+		border: 2px solid gray;
+		border-radius: 5px;
+		font-family: Comic Sans MS;
+	    }
+		
+		select {
+		border: 2px solid gray;
+		border-radius: 5px;
+	    }
+	
+	    text {
+		border: 2px solid gray;
+		border-radius: 5px;
+		font-family: Comic Sans MS;
+		color:#FE828C;
+	    }
+		
+		p {
+		font-weight: bold;
+		font-family: Comic Sans MS;
+		color:#FE828C;
+		}	
+		
+		.content {
+	    padding-left: 50px;
+		}
+		
+   
+		</style>
+		
+		</head>
+		
+	
+		
+	    <form onsubmit="return information()">
+		    <fieldset form="input">
+			<legend>❀ Sign-Up Credentials ❀</legend>
+			
+			
+			<div class="content">
+			<div>
+				<label for="givenName"> ❥ Name: </label> 
+				<br><input type="text" id="givenName" name="givenName" placeholder="Enter name " size="30" onblur="assessData(this.id, this.value)" onfocus="assessData(this.id, this.value)" required> 
+				<span> ⠀ </span>
+				<input type="text" id="surname" name="surname" placeholder="Enter surname" size="30" onblur="assessData(this.id, this.value)" onfocus="assessData(this.id, this.value)" required>
+			</div>
+				
+			<br>	
+
+			<div>
+				<label for="gender"> ❥ Gender: </label>
+				<br><select id="gender" name="gender" onblur="assessData(this.id, this.value)" onfocus="assessData(this.id, this.value)" required>
+					<option value="blank"> Select... </option><option value="Male"> Male </option><option value="Female"> Female </option><option value="Intersex"> Intersex </option><option value="Rather Not Say"> Rather Not Say </option>
+				</select>
+			
+			</div>
+
+            <br>			
+			
+			<div>
+				<label for="username"> ❥ Username: </label> 
+				<br><input type="text" id="username" name="username" placeholder="Enter username" size="30" onblur="assessData(this.id, this.value)" onfocus="assessData(this.id, this.value)" required>
+			</div>
+
+			<br>			
+			
+			<div>
+				<label for="password"> ❥ Password: </label>
+				<br><input type="password" id="password" name="password" placeholder="Enter password" size="30" onblur="assessData(this.id, this.value)" onfocus="assessData(this.id, this.value)" required>
+			</div>		
+			
+			<br>			
+			
+			<div>
+				<label for="email"> ❥ Email Address: </label>
+				<br><input type="email" id="email" name="email" placeholder="Ex: myname@gmail.com" size="30" onblur="assessData(this.id, this.value)" onfocus="assessData(this.id, this.value)" required>
+			</div>			
+			
+			<br>		
+			
+			<div>
+				<label for="address"> ❥ Address: </label> 
+				<br><input type="text" id="address" name="address" placeholder="Enter home address" rows="2" cols="50" onblur="assessData(this.id, this.value)" onfocus="assessData(this.id, this.value)" required></text>
+			</div>			
+
+			<br>
+			
+			<div>
+				<label for="interests"> ✦ What are your interests? </label>
+				<br><input id="interests" name="interests" placeholder="Any hobbies? " rows="2" cols="50" onblur="assessData(this.id, this.value)" onfocus="assessData(this.id, this.value)" required></text>						
+			</div>			
+			
+			<br>
+					
+			<div>
+			    <input type="submit">
+				
+				<input type="reset" onclick="resetPage()">
+			</div>
+			</div>
+
+			</fieldset>
+            </form>
+			
+			<br>
+			
+			<form onsubmit="return information()">
+		    <fieldset form="input">
+			<legend> Output: </legend>
+
+            <div class="content">
+			<div id="user">		
+			    <p>❀ Name: <span id="urName"> </span> <span id="ursurname"> </span> </p>
+			    <p>❀ Username: <span id="urusername"> </span> </p>
+			    <p>❀ Gender: <span id="urgender"> </span> </p>
+			    <p>❀ Password: <span id="urpassword"> </span> </p>
+			    <p>❀ Email Address: <span id="uremail"> </span> </p>
+			    <p>❀ Address: <span id="uraddress"> </span> </p>
+			    <p>❀ Interests: <span id="urinterests"> </span> </p>
+			</div>
+			</div>
+			
+			</fieldset>
+	        </form>	
+		
+	   		 <script>
+	
+	   			 function assessData(id, inputString) {
+		  			  if(id == "gender") {
+			  			  if(inputString == "blank") {
+							document.getElementById(id).style.borderColor = "red";
+			  				  } else {
+							    document.getElementById(id).style.borderColor = "lime";
+			   					 }
+				
+		
+		      						  } else if(inputString.trim() == "") {
+			      					  document.getElementById(id).style.borderColor = "red";
+		           					 } else {
+			      				  document.getElementById(id).style.borderColor = "lime";
+		      						  }
+	   					 }
+	
+	   			 function information() {
+		  				  var k = document.getElementById("gender").value;
+		   					 if(k == "blank") {
+			   				 alert("Enter an Option for your Gender; If you Prefer not to Say, Choose the Fourth Option");
+			    					return false;
+		       							 } else {
+	
+		       					var alpha = document.getElementById("givenName").value;
+		        				document.getElementById("urName").innerHTML = alpha;
+		
+		        				var beta = document.getElementById("surname").value;
+		        				document.getElementById("ursurname").innerHTML = beta;
+		
+		        				var gamma = document.getElementById("gender").value;
+		        				document.getElementById("urgender").innerHTML = gamma;
+		
+		        				var delta = document.getElementById("username").value;
+		        				document.getElementById("urusername").innerHTML = delta;
+		
+		        				var epsilon = document.getElementById("password").value;
+		        				document.getElementById("urpassword").innerHTML = epsilon;
+		
+		        				var zeta = document.getElementById("email").value;
+		        				document.getElementById("uremail").innerHTML = zeta;
+		
+		        				var eta = document.getElementById("address").value;
+		        				document.getElementById("uraddress").innerHTML = eta;
+		
+		        				var theta = document.getElementById("interests").value;
+		        				document.getElementById("urinterests").innerHTML = theta;
+		        				return false;
+				
+		      			 				 }
+	    }
+		
+					function resetPage() {
+		   							document.getElementById("ueName").innerHTML = "";
+		    							document.getElementById("uesurname").innerHTML = "";
+		    							document.getElementById("urgender").innerHTML = "";
+		    							document.getElementById("urusername").innerHTML = "";
+		    							document.getElementById("urpassword").innerHTML = "";
+		    							document.getElementById("uremail").innerHTML = "";
+	    								document.getElementById("uraddress").innerHTML = "";
+									document.getElementById("urinterests").innerHTML = "";
+
+										document.getElementById("givenName").style.borderColor = "";
+		    								document.getElementById("surname").style.borderColor = "";
+		    								document.getElementById("gender").style.borderColor = "";
+		    								document.getElementById("username").style.borderColor = "";
+		    								document.getElementById("password").style.borderColor = "";
+		    								document.getElementById("email").style.borderColor = "";
+		    								document.getElementById("address").style.borderColor = "";
+		    								document.getElementById("interests").style.borderColor = "";
+	    }
+	
+	</script>
+	
+	</body>
+	
+</html>
